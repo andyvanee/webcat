@@ -9,11 +9,11 @@ echo "<head><title>$@</title></head>" >> $fout
 echo "<body style='font-family:sans-serif;'>" >> $fout
 echo "  <div style='width: 800px; margin: 0 auto'>" >> $fout
 echo "    <h1>"$@"</h1>" >> $fout
-echo "      <pre>" >> $fout
+echo "      <div class='content'>" >> $fout
 
-cat | col -b | sed 's/</\&lt;/g' | sed 's/>/\&gt;/g' >> $fout
+cat | Markdown.pl >> $fout
 
-echo "      </pre>"  >> $fout
+echo "      </div>"  >> $fout
 echo "    </div>"  >> $fout
 echo "  </body>" >> $fout
 echo "</html>" >> $fout
