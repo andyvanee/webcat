@@ -2,7 +2,7 @@
 
 # Read stdin and display it as a web page
 
-fout=/tmp/web.html
+fout=/tmp/webcat`date "+%H-%M-%S"`.html
 
 echo "<!DOCTYPE html><html>" > $fout
 echo "<head><title>$@</title></head>" >> $fout
